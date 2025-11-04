@@ -12,7 +12,11 @@ def add_days(date: datetime, days: int) -> datetime:
     Returns:
         datetime: A new datetime object with the specified number of days added.
     """
-    return date + datetime.timedelta(days=days)
+    try:
+        return date + datetime.timedelta(days=days)
+    except Exception as error:
+        return (f"An error occurred while adding days: {error}")
+
 
 
 def middle_day_between_two_dates(
@@ -28,6 +32,9 @@ def middle_day_between_two_dates(
     Returns:
         datetime: A date representing the middle day between the two input dates.
     """
-    difference = final_date - initial_date
-    middle_day = initial_date + datetime.timedelta(days=difference.days / 2)
-    return middle_day
+    try:
+        difference = final_date - initial_date
+        middle_day = initial_date + datetime.timedelta(days=difference.days / 2)
+        return middle_day
+    except Exception as error:
+        return (f"An error occurred while calculating the middle day: {error}")

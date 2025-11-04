@@ -1,4 +1,5 @@
 # geometry.py
+import math
 
 
 def square_area(side_length: float) -> float:
@@ -11,10 +12,11 @@ def square_area(side_length: float) -> float:
     Returns:
     - float: the area of the square.
     """
-    # Write here your code
-    pass
-
-
+    try:
+        return pow(side_length, 2)
+    except TypeError:
+        raise TypeError("side_length debe ser un número.")
+    
 def rectangle_area(base_length: float, height: float) -> float:
     """
     Calculate the area of a rectangle.
@@ -26,9 +28,12 @@ def rectangle_area(base_length: float, height: float) -> float:
     Returns:
     - float: the area of the rectangle.
     """
-    # Write here your code
-    pass
-
+    try:
+        return base_length * height
+    except TypeError:
+        raise TypeError("base_length y height deben ser números.")
+    except ValueError:
+        raise ValueError("base_length y height deben ser valores positivos.")
 
 def triangle_area(base_length: float, height: float) -> float:
     """
@@ -41,10 +46,11 @@ def triangle_area(base_length: float, height: float) -> float:
     Returns:
     - float: the area of the triangle.
     """
-    # Write here your code
-    pass
-
-
+    try:
+        return (base_length * height) / 2
+    except TypeError:
+        raise TypeError("base_length y height deben ser números.")
+    
 def circle_area(radius: float) -> float:
     """
     Calculate the area of a circle.
@@ -55,5 +61,9 @@ def circle_area(radius: float) -> float:
     Returns:
     - float: the area of the circle
     """
-    # Write here your code
-    pass
+    try:
+        return math.pi * pow(radius, 2)
+    except TypeError:
+        raise TypeError("radius debe ser un número.")
+    except ValueError:
+        raise ValueError("radius debe ser un valor positivo.")
