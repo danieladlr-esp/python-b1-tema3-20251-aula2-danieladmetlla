@@ -12,7 +12,10 @@ def string_to_datetime(date_string: str, date_format: str = "%Y-%m-%d") -> datet
     Returns:
         datetime: The resulting datetime object.
     """
-    return datetime.strptime(date_string, date_format)
+    try:
+        return datetime.strptime(date_string, date_format)
+    except exception as error:
+        raise ValueError(f"Error al convertir la cadena a datetime: {error}")
 
 
 def datetime_to_string(date_time: datetime, date_format: str = "%Y-%m-%d") -> str:
@@ -26,4 +29,7 @@ def datetime_to_string(date_time: datetime, date_format: str = "%Y-%m-%d") -> st
     Returns:
         str: The resulting string.
     """
-    return date_time.strftime(date_format)
+    try:
+        return date_time.strftime(date_format)
+    except exception as error:
+        raise ValueError(f"Error al convertir datetime a cadena: {error}")
