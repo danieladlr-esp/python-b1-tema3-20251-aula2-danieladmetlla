@@ -1,12 +1,12 @@
 # arithmetic.py
 import math
 
+
 def power(base: float, exponent: float) -> float:
-	# Write your code here
-	pass
+    return base**exponent
+    pass
+
 
 def square_root(num_1: float) -> float:
-	# Write your code here
-	pass
-
-
+    return num_1**0.5
+    pass
