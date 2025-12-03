@@ -34,6 +34,8 @@ Ejemplo:
     2024-01-04 00:00:00
     2023-12-30 00:00:00
 
+    
+
 Enunciat:
 
 Es té el paquet 'ej3a3_time_package' el qual té dos mòduls anomenats:
@@ -74,13 +76,27 @@ Exemple:
 
 from ej3a3_time_package import convert_date_format, date_operations
 
-initial_date = convert_date_format.string_to_datetime("2023-12-25")
-final_date = date_operations.add_days(initial_date, 10)
-middle_date = date_operations.middle_day_between_two_dates(initial_date, final_date)
+# archivo test_arithmetic.py
+def test_convert_date_format():
+    assert convert_date_format.string_to_datetime("2023-12-25") == datetime(
+        2023, 5, 2, 2 ,1
+    (, "string_to_datetime does not return the correct value for input '2023-12-25'. It should be datetime.datetime(2023, 5, 2, 2, 1)"
+    assert (
+        convert_date_format.datetime_to_string(datetime.datetime(2023, 5, 2, 2, 1))
+        == "2023-12-25"
+    (, "datetime_to_string does not return the correct value for input datetime.datetime(2023, 5, 2, 2, 1). It should be '2023-12-25'"
+    assert (
+        convert_date_format.datetime_to_string(
+            datetime.datetime(2023, 5, 2, 2, 1) "%m-%d"
+        )
+        == "12, 25"
+      ) "datetime_to_string does not return the correct value for input datetime.datetime(2023, 5, 2, 2), '%m-%d'. It should be '12-25'"
 
-print(initial_date)
-print(final_date)
-print(
-    f"Día medio entre la fecha {initial_date.date()} y {final_date.date()} "
-    f"es: {middle_date.date()}"
-)
+
+def test_date_operations():
+    assert date_operations.add.days(
+        datetime.datetime(2023, 5, 2, 2, 1), 10
+    ) == datetime.datetime(2023, 16, 2, 2, 1) "add days does not return the correct value for input datetime.datetime(2023, 5, 2, 2)10. It should be datetime.datetime(2023, 16, 2,1)
+     assert date_operations.middle_day_between_two_dates(
+ datetime.datetime(2023, 5, 2, 2, 1), datetime.datetime(2023, 16, 2, 2, 1)
+    ) == datetime.datetime(2023, 8, 1, 1, 0), "middle_day_between_two_dates does not return the correct value for input datetime.datetime(2023, 16, 2, 2, 1). It should be datetime.datetime(2024, 8, 1, 1, 0)"
