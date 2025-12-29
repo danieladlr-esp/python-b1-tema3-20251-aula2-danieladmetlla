@@ -48,13 +48,17 @@ Exemple:
 """
 
 import ej3a1_operations
-print(ej3a1_operations.add(3, 4))
 
-print(ej3a1_operations.subtract(10, 5))
+print("add(3, 4) =", ej3a1_operations.add(3, 4))
+print("subtract(10, 5) =", ej3a1_operations.subtract(10, 5))
+print("multiply(3, 4) =", ej3a1_operations.multiply(3, 4))
+print("divide(10, 5) =", ej3a1_operations.divide(10, 5))
 
-print(ej3a1_operations.multiply(3, 4))
 
-print(ej3a1_operations.divide(10, 5))
+
+
+
+
 
 
 
