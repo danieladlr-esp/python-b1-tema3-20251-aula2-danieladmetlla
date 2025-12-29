@@ -72,19 +72,26 @@ Exemple:
 
 import math
 
-def square_area(side_lenght):
-    return side_lenght ** 2
+def power(base, exponent):
+    return base ** exponent
 
-def rectangle_area(base_lenght, height):
-    return base_lenght * height
+def square_root(number):
+    return math.sqrt(number)
 
-def triangle_area(base_lenght, height):
-    return (base_lenght * height) / 2
+
+
+def square_area(side_length):
+    return side_length ** 2
+
+def rectangle_area(base_length, height):
+    return base_length * height
+
+def triangle_area(base_length, height):
+    return (base_length * height) / 2
 
 def circle_area(radius):
     return math.pi * (radius ** 2)
-    
-    
+
 
 
 
