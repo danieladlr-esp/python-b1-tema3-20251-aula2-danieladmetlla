@@ -12,7 +12,7 @@ def square_area(side_length: float) -> float:
     - float: the area of the square.
     """
     # Write here your code
-    pass
+    return side_lenght**2
 
 
 def rectangle_area(base_length: float, height: float) -> float:
@@ -27,7 +27,7 @@ def rectangle_area(base_length: float, height: float) -> float:
     - float: the area of the rectangle.
     """
     # Write here your code
-    pass
+    return base_lenght * height
 
 
 def triangle_area(base_length: float, height: float) -> float:
@@ -42,7 +42,7 @@ def triangle_area(base_length: float, height: float) -> float:
     - float: the area of the triangle.
     """
     # Write here your code
-    pass
+    return (base_lenght * height) / 2
 
 
 def circle_area(radius: float) -> float:
@@ -56,4 +56,7 @@ def circle_area(radius: float) -> float:
     - float: the area of the circle
     """
     # Write here your code
-    pass
+    return 3.1415 * (radius**2)
+    
+
+
