@@ -70,31 +70,6 @@ Exemple:
 """
 # archivo ej3a2_main.py
 
-import math
-
-def power(base, exponent):
-    return base ** exponent
-
-def square_root(number):
-    return math.sqrt(number)
-
-
-
-def square_area(side_length):
-    return side_length ** 2
-
-def rectangle_area(base_length, height):
-    return base_length * height
-
-def triangle_area(base_length, height):
-    return (base_length * height) / 2
-
-def circle_area(radius):
-    return math.pi * (radius ** 2)
-
-
-
-
 from ej3a2_math_package import geometry, arithmetic
 
 # Arithmetic operations
