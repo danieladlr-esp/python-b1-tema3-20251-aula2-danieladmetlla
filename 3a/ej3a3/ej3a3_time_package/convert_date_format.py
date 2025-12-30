@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 def string_to_datetime(date_string: str, date_format: str = "%Y-%m-%d") -> datetime:
     """
     Converts a string to a datetime object using the specified format.
